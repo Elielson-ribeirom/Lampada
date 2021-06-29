@@ -1,0 +1,69 @@
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.lampada{
+    width: 320px;
+    margin: 0 auto;
+}
+.lampada .luz{
+    margin-top: -70px;
+}
+.lampada .luz img { 
+    -webkit-animation: balanco 3s alternate infinite ease-in-out;
+    animation: balanco 3s alternate infinite ease-in-out;
+    z-index:10;
+}
+.lampada h1{
+    text-align: center;
+    font-size: 50px;
+}
+.lampada .luz img{
+    margin: 0 auto;
+    display: block;
+}
+.lampada .interruptor{
+    background-image: url(../img/liga-desliga.png);
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 180px;
+    margin: 45px auto;
+    margin-bottom: 0;
+}
+.lampada .interruptor .btn{
+    background-repeat: no-repeat;
+    width: 102px;
+    height: 102px;
+    overflow: hidden;
+    text-indent: -9999em;
+    float: left;
+    margin: 39px;
+}
+.lampada .interruptor .liga{
+    background-image: url(../img/liga.png);
+}
+.lampada .interruptor .desliga{
+    background-image: url(../img/desliga.png);
+}
+
+@-webkit-keyframes balanco {
+    from {
+        -webkit-transform: translateY(50px)
+        rotate(-10deg)
+    }
+    to {
+        -webkit-transform: translateY( -50px)
+        rotate( 10deg)
+    }
+}
+@keyframes balanco{ 
+    from { 
+        transform: translate(50px)
+        rotate(-10deg)
+    }
+    to{
+        transform: translate( -50px)
+        rotate(  10deg)
+    }
+}
